@@ -1,0 +1,14 @@
+python: 3.14.5
+implementacao: CPython
+sistema: macOS-27.0-arm64-arm-64bit-Mach-O
+processador: arm
+cpus: 8
+pandas: 3.1.1
+numpy: 2.5.5
+matplotlib: 3.11.2
+semente: 2024
+repeticoes: 5
+config: {'ordenacao': {'tamanhos': (500, 2000, 8000), 'perfis': ('aleatorio', 'ordenado', 'inverso', 'repeticoes')}, 'busca': {'tamanhos': (2000, 6000, 18000), 'perfis': ('regular', 'real', 'concentrada'), 'q': 2000}, 'hash': {'alfas': (0.25, 0.5, 0.75, 1.0, 2.0), 'q': 20000}, 'lote': {'qs': (1, 10, 100, 1000, 10000)}, 'misto': {'q_trimestral': 1000, 'n_ops_intercalado': 4000, 'proporcoes': (0.8, 0.1, 0.05, 0.05)}}
+sequencia trimestral: {'consulta': 4000, 'inserir': 4341, 'alterar': 30810, 'remover': 5619}
+sequencia intercalada: {'consulta': 3224, 'inserir': 181, 'alterar': 399, 'remover': 196}
+divergencias: nenhuma

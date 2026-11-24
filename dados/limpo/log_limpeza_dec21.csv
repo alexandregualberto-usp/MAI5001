@@ -1,0 +1,16 @@
+etapa,linhas,decisao
+entrada,18526,linhas no bruto
+id inválido,0,descartar: sem id não há registro
+id duplicado,0,manter a primeira ocorrência
+nome vazio,8,imputar '(sem nome)': o resto do anúncio é válido
+preço ausente ou <= 0,2,descartar: preço é o atributo principal
+preço > 1000 €/noite,44,"manter e sinalizar: pode ser erro do anfitrião, mas não há como provar"
+capacidade < 1,0,descartar: anúncio para 0 hóspedes não é válido
+tipo_quarto fora do domínio,0,descartar
+"nota fora de [0,5]",0,virar ausente
+nota ausente,2504,"manter ausente (None): anúncio sem avaliação, não imputar"
+nota ausente com avaliacoes > 0,0,manter: o Airbnb só mostra nota a partir de algumas avaliações
+licença ausente,1797,manter ausente (None)
+bairro/município com letras acentuadas perdidas na fonte,0,"manter como veio (ex.: 'Belm' = Belém); é igual nas 4 coletas, então agrupa certo"
+quase duplicados (mesmo host/nome/preço/capacidade),139,manter: são unidades diferentes de um mesmo anfitrião (ids diferentes)
+saída,18524,linhas no arquivo limpo
